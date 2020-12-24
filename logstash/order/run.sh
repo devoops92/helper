@@ -1,0 +1,1 @@
+./logstash.sh start pipeline

@@ -1,0 +1,350 @@
+{
+    "index_patterns": ["sabang_prod_order*"],
+    "settings": {
+        "number_of_shards" : 1,
+        "number_of_replicas" : 1
+    },
+    "mappings": {
+        "properties": {
+            "order_join": {
+                "type": "join",
+                "relations": {
+                    "product": "order"
+                }
+            },
+            "p_num": {
+                "type" : "keyword"
+            },
+            "prod_id" : {
+                "type" : "keyword"
+            },
+            "prod_nm" : {
+                "type" : "text"
+            },
+            "product_keyword" : {
+                "type" : "keyword"
+            },
+            "model_nm" : {
+                "type" : "text"
+            },
+            "model_no" : {
+                "type" : "keyword"
+            },
+            "partner_prod_id" : {
+                "type" : "keyword"
+            },
+            "brand_nm" : {
+                "type" : "text"
+            },
+            "cate_l" : {
+                "type" : "keyword"
+            },
+            "cate_m" : {
+                "type" : "keyword"
+            },
+            "cate_s" : {
+                "type" : "keyword"
+            },
+            "cate_d" : {
+                "type" : "keyword"
+            },
+            "partner_id" : {
+                "type" : "keyword"
+            },
+            "dpartner_id" : {
+                "type" : "keyword"
+            },
+            "partner_nm" : {
+                "type" : "text"
+            },
+            "maker_nm" : {
+                "type" : "text"
+            },
+            "origin_code" : {
+                "type" : "keyword"
+            },
+            "sale_status" : {
+                "type" : "keyword"
+            },
+            "product_search" : {
+                "type" : "text"
+            },
+            "product_gubun" : {
+                "type" : "keyword"
+            },
+            "make_year" : {
+                "type" : "keyword"
+            },
+            "make_dm" : {
+                "type" : "keyword"
+            },
+            "expire_dm" : {
+                "type" : "keyword"
+            },
+            "product_season" : {
+                "type" : "keyword"
+            },
+            "sex_tp" : {
+                "type" : "keyword"
+            },
+            "sale_area" : {
+                "type" : "keyword"
+            },
+            "charge_delv" : {
+                "type" : "keyword"
+            },
+            "market_cost" : {
+                "type" : "integer"
+            },
+            "banpum_area" : {
+                "type" : "keyword"
+            },
+            "tax_code" : {
+                "type" : "keyword"
+            },
+            "delv_cost" : {
+                "type" : "integer"
+            },
+            "won_cost" : {
+                "type" : "integer"
+            },
+            "won_cost2" : {
+                "type" : "integer"
+            },
+            "sale_cost" : {
+                "type" : "integer"
+            },
+            "qty" : {
+                "type" : "integer"
+            },
+            "certno" : {
+                "type" : "keyword"
+            },
+            "issuedate" : {
+                "type" : "keyword"
+            },
+            "certdate" : {
+                "type" : "keyword"
+            },
+            "avlst_dm" : {
+                "type" : "keyword"
+            },
+            "avled_dm" : {
+                "type" : "keyword"
+            },
+            "cert_agency" : {
+                "type" : "keyword"
+            },
+            "certfield" : {
+                "type" : "keyword"
+            },
+            "compayny_id" : {
+                "type" : "keyword"
+            },
+            "cmpy_nm" : {
+                "type" : "text"
+            },
+            "supply_gubun" : {
+                "type" : "keyword"
+            },
+            "supply_save_yn" : {
+                "type" : "keyword"
+            },
+            "stock_use_yn" : {
+                "type" : "keyword"
+            },
+            "set_prod_yn" : {
+                "type" : "keyword"
+            },
+            "reg_nm" : {
+                "type" : "keyword"
+            },
+            "reg_dm" : {
+                "type": "date",
+                "format": "yyyyMMddHHmm || yyyyMMddHHmmss || yyyy/MM/dd || yyyyMMdd"
+            },
+            "upd_nm" : {
+                "type" : "keyword"
+            },
+            "upd_dm" : {
+                "type" : "keyword"
+            },
+            "upd_ts" : {
+                "type": "date",
+                "format": "yyyyMMddHHmm || yyyyMMddHHmmss || yyyy/MM/dd || yyyyMMdd"
+            },
+            "del_dm" : {
+                "type" : "keyword"
+            },
+            "cp_prod_id" : {
+                "type" : "keyword"
+            },
+            "material_name" : {
+                "type" : "keyword"
+            },
+            "opt_upd_dm" : {
+                "type" : "keyword"
+            },
+            "promotion_name" : {
+                "type" : "keyword"
+            },
+            "prod_nm_en" : {
+                "type" : "keyword"
+            },
+            "prod_nm_pr" : {
+                "type" : "text"
+            },
+            "origin_code2" : {
+                "type" : "keyword"
+            },
+            "stats_sale_cnt" : {
+                "type" : "integer"
+            },
+            "stats_sale_cnt_dm" : {
+                "type" : "integer"
+            },
+            "idx": { "type": "keyword"},
+            "order_id": { "type": "keyword" },
+            "compayny_id": { "type": "keyword" },
+            "mall_id": { "type": "keyword" },
+            "mall_user_id": { "type" : "keyword" },
+            "cust_id": { "type" : "keyword" },
+            "cust_nm": { "type" : "keyword" },
+            "cust_tel": { "type" : "keyword" },
+            "cust_cel": { "type" : "keyword" },
+            "cust_email": { "type" : "keyword" },
+            "rcv_tel": { "type" : "keyword" },
+            "rcv_cel": { "type" : "keyword" },
+            "rcv_email": { "type" : "keyword" },
+            "delv_msg": { "type" : "text" },
+            "mul_delv_msg": { "type" : "text" },
+            "rcv_nm": { "type" : "keyword" },
+            "rcv_zip": { "type" : "keyword" },
+            "rcv_addr": { "type" : "keyword" },
+            "total_cost": { "type" : "integer" },
+            "ord_status": { "type" : "keyword" },
+            "auto_fg": { "type" : "keyword" },
+            "order_gubun": { "type" : "keyword" },
+            "ord_dt": { "type": "text" },
+            "hope_delv_date": { "type" : "keyword" },
+            "hope_delv_type": { "type" : "keyword" },
+            "wms_date": { "type" : "keyword" },
+            "wms_nm": { "type" : "keyword" },
+            "ord_confirm_date": { "type" : "keyword" },
+            "dlvery_rcv_dt": { 
+                "type": "date",
+                "format": "yyyyMMddHHmm || yyyyMMddHHmmss || yyyy/MM/dd || yyyyMMdd"
+            },
+            "delivery_confirm_date": {
+                "type": "date",
+                "format": "yyyyMMddHHmm || yyyyMMddHHmmss || yyyy/MM/dd || yyyyMMdd"
+            },
+            "cancel_rcv_dt": { 
+                "type": "date",
+                "format": "yyyyMMddHHmm || yyyyMMddHHmmss || yyyy/MM/dd || yyyyMMdd"
+            },
+            "cancel_dt": { 
+                "type": "date",
+                "format": "yyyyMMddHHmm || yyyyMMddHHmmss || yyyy/MM/dd || yyyyMMdd"
+            },
+            "rtn_rcv_dt": { 
+                "type": "date",
+                "format": "yyyyMMddHHmm || yyyyMMddHHmmss || yyyy/MM/dd || yyyyMMdd"
+            },
+            "rtn_dt": { 
+                "type": "date",
+                "format": "yyyyMMddHHmm || yyyyMMddHHmmss || yyyy/MM/dd || yyyyMMdd"
+            },
+            "reg_nm": { "type" : "keyword" },
+            "ord_confirm_nm": { "type" : "text" },
+            "dlvery_rcv_nm": { "type" : "text" },
+            "delivery_confirm_nm": { "type" : "text" },
+            "cancel_rcv_nm": { "type" : "text" },
+            "cancel_nm": { "type" : "text" },
+            "rtn_rcv_nm": { "type" : "text" },
+            "rtn_nm": { "type" : "text" },
+            "chng_rcv_dt":  { 
+                "type": "date",
+                "format": "yyyyMMddHHmm || yyyyMMddHHmmss || yyyy/MM/dd || yyyyMMdd"
+            },
+            "chng_dt":  { 
+                "type": "date",
+                "format": "yyyyMMddHHmm || yyyyMMddHHmmss || yyyy/MM/dd || yyyyMMdd"
+            },
+            "chng_rcv_nm": { "type" : "text" },
+            "chng_nm": { "type" : "text" },
+            "ord_hold_date":  { "type" : "keyword" },
+            "ord_hold_nm": { "type" : "text" },
+            "inv_send_dm":  { "type" : "keyword" },
+            "inv_send_nm": { "type" : "keyword" },
+            "inv_send_err": { "type" : "keyword" },
+            "upd_nm": { "type" : "keyword" },
+            "copy_idx": { "type" : "keyword" },
+            "stock_confirm_dm": { 
+                "type": "date",
+                "format": "yyyyMMddHHmm || yyyyMMddHHmmss || yyyy/MM/dd || yyyyMMdd"
+            },
+            "ord_scnd_id": { "type" : "text" },
+            "mall_order_seq": { "type" : "text" },
+            "jung_chk_yn": { "type" : "keyword" },
+            "jung_ip_price": { "type" : "integer" },
+            "ord_set_yn": { "type" : "keyword" },
+            "ord_set_nm": { "type" : "keyword" },
+            "jung_chk_date":  { "type" : "keyword" },
+            "partner_id": { "type" : "keyword" },
+            "dpartner_id": { "type" : "keyword" },
+            "ord_no": { "type" : "integer" },
+            "mall_prod_id": { "type" : "keyword" },
+            "p_num": { "type" : "keyword" },
+            "prod_id": { "type" : "keyword" },
+            "sku_id": { "type" : "keyword" },
+            "p_product_name": { "type" : "text" } ,
+            "p_sku_value": { "type" : "keyword" } ,
+            "prod_nm": { "type" : "text" } ,
+            "product_keyword": { "type" : "text" } ,
+            "sale_cost": { "type" : "integer" } ,
+            "pay_cost": { "type" : "integer" } ,
+            "mall_won_cost": { "type" : "integer" } ,
+            "won_cost": { "type" : "integer" } ,
+            "ptotal_cost": { "type" : "integer" },
+            "sku_value": { "type" : "text" },
+            "sale_cnt": { "type" : "integer" },
+            "delivery_method": { "type" : "keyword" },
+            "delivery_method_str": { "type" : "keyword" },
+            "delv_cost": { "type" : "integer" },
+            "install_dutch": { "type" : "keyword" },
+            "install_cost": { "type" : "keyword" },
+            "delivery_id": { "type" : "keyword" },
+            "invoice_no": { "type" : "keyword" },
+            "barcode_chk": { "type" : "keyword" },
+            "sku_cost": { "type" : "integer" },
+            "delv_revi_cost": { "type" : "integer" },
+            "etc_field11": { "type" : "text" },
+            "etc_field12": { "type" : "text" },
+            "barcode_good_chk": { "type" : "keyword" },
+            "barcode_good_err": { "type" : "keyword" },
+            "barcode_chk_date":  { "type" : "keyword" },
+            "prd_cate_l": { "type" : "keyword" },
+            "prd_cate_m": { "type" : "keyword" },
+            "prd_cate_s": { "type" : "keyword" },
+            "prd_cate_d": { "type" : "keyword" },
+
+            "mp_idx": { "type" : "keyword" },
+            "mall_id": { "type" : "keyword" },
+            "user_id": { "type" : "keyword" },
+            "buinfo_id": { "type" : "keyword" },
+            "product_id": { "type" : "keyword" },
+            "mall_product_id": { "type" : "keyword" },
+            "product_name": { "type" : "text" },
+            "brand_nm": { "type" : "text" },
+            "sale_cost": { "type" : "integer" },
+            "maker_nm": { "type" : "text" },
+            "product_gubun": { "type" : "keyword" },
+            "ok_yn": { "type" : "keyword" },
+            "send_dm": {
+                "type": "date",
+                "format": "yyyyMMddHHmm || yyyyMMddHHmmss || yyyy/MM/dd || yyyyMMdd"
+            }
+        }
+    }
+}
